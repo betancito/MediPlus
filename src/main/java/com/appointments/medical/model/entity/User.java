@@ -3,7 +3,6 @@ package com.appointments.medical.model.entity;
 import jakarta.persistence.*;
 import lombok.*;
 import com.appointments.medical.model.enums.userRole;
-import org.springframework.data.annotation.Id;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
