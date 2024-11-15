@@ -1,4 +1,4 @@
-package model.entity;
+package com.appointments.medical.model.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -7,15 +7,13 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
 
-import java.sql.Time;
-
 @Entity
-@Table(name = "doctor")
+@Table(name = "patient")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class doctor {
+public class Patient {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -29,14 +27,5 @@ public class doctor {
 
     @Column(nullable = false)
     private String email;
-
-    @Column(nullable = false)
-    private Time shift_start;
-
-    @Column(nullable = false)
-    private Time shift_end;
-
-    @Column(nullable = false)
-    private Boolean available;
 
 }

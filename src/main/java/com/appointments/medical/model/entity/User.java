@@ -1,8 +1,8 @@
-package model.entity;
+package com.appointments.medical.model.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import model.enums.userRole;
+import com.appointments.medical.model.enums.userRole;
 import org.springframework.data.annotation.Id;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -17,7 +17,7 @@ import java.util.List;
 @Table(name = "user")
 @AllArgsConstructor
 @NoArgsConstructor
-public class user implements UserDetails {
+public class User implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

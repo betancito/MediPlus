@@ -1,11 +1,11 @@
-package model.entity;
+package com.appointments.medical.model.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import model.enums.appointmentStatus;
+import com.appointments.medical.model.enums.appointmentStatus;
 
 import java.sql.Time;
 import java.util.Date;
@@ -16,7 +16,7 @@ import java.util.Date;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class appointment {
+public class Appointment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -24,11 +24,11 @@ public class appointment {
 
     @OneToOne
     @JoinColumn(name = "doctor_id", referencedColumnName = "id")
-    private doctor doctor;
+    private Doctor doctor;
 
     @OneToOne
     @JoinColumn(name = "patient_id", referencedColumnName = "id")
-    private patient patient;
+    private Patient patient;
 
     @Column(nullable = false)
     private Date appointment_date;
