@@ -1,4 +1,4 @@
-package model.entity;
+package com.appointments.medical.model.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -13,17 +13,17 @@ import org.springframework.data.annotation.Id;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class medicalHistory {
+public class MedicalHistory {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @OneToOne
     @JoinColumn(name = "patient_id", referencedColumnName = "id")
-    private patient patient;
+    private Patient patient;
 
     @ManyToOne
     @JoinColumn(name = "appointment_id")
-    private appointment appointment;
+    private Appointment appointment;
 
 }
